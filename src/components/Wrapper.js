@@ -2,7 +2,7 @@ import { useState } from "react";
 import Counter from "./Counter.js";
 
 const Wrapper = () => {
-  let [counter, setCounter] = useState();
+  const [counter, setCounter] = useState(0);
   const [isCounter, setIsCounter] = useState(0);
   let [inputValue, setInputValue] = useState(0);
 
@@ -29,7 +29,6 @@ const Wrapper = () => {
     clearInterval(isCounter);
     setCounter(0);
     setIsCounter(0);
-    console.log(isCounter);
   };
 
   return (
@@ -41,7 +40,13 @@ const Wrapper = () => {
         type="number"
         onChange={inputOnChange}
       />
-      {isCounter && <Counter counter={counter} />}
+      {isCounter === 0 ? (
+        <></>
+      ) : (
+        <div>
+          <Counter counter={counter} />
+        </div>
+      )}
 
       <div className="btn">
         <button onClick={() => startCounter()}>Start</button>
