@@ -36,7 +36,7 @@ const Wrapper = () => {
       <h1 className="heading">Counter App</h1>
       <input
         id="input"
-        placeholder="0"
+        placeholder="Enter a number"
         type="number"
         onChange={inputOnChange}
       />
