@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Counter from "./Counter.js";
-
+// This is class based components
 const Wrapper = () => {
   const [counter, setCounter] = useState(0);
   const [isCounter, setIsCounter] = useState(0);
